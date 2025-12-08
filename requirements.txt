@@ -1,0 +1,29 @@
+# 基础依赖
+fastapi==0.111.0
+uvicorn==0.29.0
+pydantic==2.7.3
+pydantic-settings==2.2.1
+
+# RAG相关依赖
+langchain==0.2.10
+langchain-community==0.2.9
+chromadb==0.5.3
+sentence-transformers==2.7.0
+
+# 模型API依赖
+openai==1.30.5
+dashscope==1.15.11
+
+# Phoenix评估依赖
+phoenix==3.20.0
+pandas==2.2.2
+nest-asyncio==1.6.0
+opentelemetry-sdk==1.25.0
+opentelemetry-exporter-otlp-proto-http==1.25.0
+
+# 工具依赖
+python-dotenv==1.0.1
+numpy==1.26.4
+
+# 测试依赖
+pytest==8.2.2

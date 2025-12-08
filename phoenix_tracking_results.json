@@ -1,0 +1,938 @@
+{
+  "summary": {
+    "total_tests": 5,
+    "successful_tests": 5,
+    "failed_tests": 0,
+    "average_score": 0.514,
+    "timestamp": "2025-12-08T20:00:02.213580"
+  },
+  "detailed_results": [
+    {
+      "question": "3号楼5楼发生火灾，有人员被困，如何制定应急响应方案？",
+      "timestamp": "2025-12-08T19:58:47.971956",
+      "pipeline_result": {
+        "retrieved_docs_count": 10,
+        "generated_response": {
+          "阶段一": {
+            "消防员": [
+              "接到报警后60秒内出动消防车赶赴现场",
+              "途中联系报警人了解火势和被困人员情况",
+              "准备破拆、搜救、灭火及呼吸防护装备"
+            ],
+            "医生": [
+              "立即启动急救响应，准备救护车和急救设备",
+              "与消防队保持通讯，了解伤员状况以便准备相应救治方案",
+              "在安全区域设立临时救护点待命"
+            ],
+            "保安": [
+              "迅速封锁火灾现场周边区域，设置警戒线",
+              "阻止无关人员进入火灾现场，保障救援通道畅通",
+              "协助组织初期疏散并查看监控确认被困人员位置"
+            ],
+            "物业": [
+              "立即切断3号楼5楼电源防止电击风险",
+              "通过广播系统通知楼内人员有序疏散",
+              "通知微型消防站先行处置并上报上级管理部门"
+            ]
+          },
+          "阶段二": {
+            "消防员": [
+              "到达现场后实施火情侦察，确定主攻方向和搜救路线",
+              "开展内攻灭火和人员搜救，优先营救被困人员",
+              "使用水枪冷却保护周边可燃物，防止火势蔓延"
+            ],
+            "医生": [
+              "对救出的受伤人员进行现场初步检伤分类和急救处理",
+              "根据伤情决定是否转运医院并提前联系接收医院",
+              "持续监测伤员生命体征，维持呼吸道通畅和循环稳定"
+            ],
+            "保安": [
+              "维护现场治安秩序，防止混乱和无关人员闯入",
+              "引导救援车辆快速进入指定位置，确保交通畅通",
+              "配合消防员核实人员疏散情况，报告未撤离人员信息"
+            ],
+            "物业": [
+              "调配应急物资如灭火器、应急灯、防烟面具等支援现场",
+              "保障救援期间通信、照明和供水系统正常运行",
+              "协助后勤组提供救援人员所需饮食和基本生活保障"
+            ]
+          },
+          "阶段三": {
+            "消防员": [
+              "确认火场无复燃隐患，完成现场清理和监护",
+              "移交火灾现场给事故调查组，配合后续调查工作",
+              "总结救援过程，记录行动数据并提交报告"
+            ],
+            "医生": [
+              "将所有伤员安全转运至医院并交接治疗",
+              "汇总现场医疗救援数据，评估应急响应效果",
+              "对参与救援的医护人员进行心理疏导和支持"
+            ],
+            "保安": [
+              "继续封锁火灾现场直至调查组允许解除",
+              "协助保护火灾现场证据，防止人为破坏",
+              "恢复周边秩序，逐步解除警戒措施"
+            ],
+            "物业": [
+              "配合事故调查小组开展起火原因调查",
+              "启动善后处理程序，安排受损设施修复",
+              "组织受灾人员安置和心理援助，发布事件通报"
+            ]
+          }
+        },
+        "resource_coordination": {
+          "incident_id": "incident_20251208_195847",
+          "requirements": {
+            "location": "3号楼",
+            "severity": "严重",
+            "resource_needs": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "quantity": 2,
+                "location": "3号楼"
+              },
+              {
+                "resource_type": "RESCUE_TEAM",
+                "quantity": 1,
+                "location": "3号楼"
+              },
+              {
+                "resource_type": "FIRST_AID_KIT",
+                "quantity": 1,
+                "location": "3号楼"
+              },
+              {
+                "resource_type": "EVACUATION_ROUTE",
+                "quantity": 1,
+                "location": "3号楼"
+              }
+            ]
+          },
+          "allocation_result": {
+            "status": "success",
+            "message": "资源分配完成",
+            "allocated": [
+              {
+                "resource_id": "ext_2",
+                "resource_type": "FIRE_EXTINGUISHER",
+                "location": "3号楼5楼走廊"
+              },
+              {
+                "resource_id": "ext_1",
+                "resource_type": "FIRE_EXTINGUISHER",
+                "location": "3号楼1楼大厅"
+              },
+              {
+                "resource_id": "team_1",
+                "resource_type": "RESCUE_TEAM",
+                "location": "校内救援队"
+              },
+              {
+                "resource_id": "firstaid_1",
+                "resource_type": "FIRST_AID_KIT",
+                "location": "3号楼1楼医务室"
+              },
+              {
+                "resource_id": "route_1",
+                "resource_type": "EVACUATION_ROUTE",
+                "location": "3号楼标准路线"
+              }
+            ],
+            "unavailable": [],
+            "guidance": []
+          },
+          "resource_status": {
+            "timestamp": "2025-12-08T19:58:47.870775",
+            "total_resources": 8,
+            "available_resources": 3,
+            "allocated_resources": 5,
+            "utilization_rate": 0.625,
+            "resources_by_type": {
+              "FIRE_HOSE": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "EMERGENCY_CONTACT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "MEDICAL_SUPPORT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "FIRE_EXTINGUISHER": {
+                "total": 2,
+                "available": 0,
+                "allocated": 2
+              },
+              "RESCUE_TEAM": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "FIRST_AID_KIT": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "EVACUATION_ROUTE": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              }
+            },
+            "active_agents": 1
+          }
+        },
+        "evaluation": {
+          "hallucination": {
+            "overall_score": 0.3,
+            "hallucination_detected": false,
+            "evaluation_method": "fallback_hallucination_evaluator",
+            "uncertainty_count": 0
+          },
+          "quality": {
+            "overall_quality_score": 0.6799999999999999,
+            "sub_scores": {
+              "accuracy": {
+                "score": 0.6799999999999999
+              },
+              "relevance": {
+                "score": 0.612
+              },
+              "completeness": {
+                "score": 0.578
+              }
+            },
+            "evaluation_method": "fallback_qa_evaluator",
+            "quality_indicators": 1
+          }
+        },
+        "overall_score": 0.49
+      }
+    },
+    {
+      "question": "实验室化学品火灾，应该如何正确处置？",
+      "timestamp": "2025-12-08T19:59:05.903574",
+      "pipeline_result": {
+        "retrieved_docs_count": 10,
+        "generated_response": {
+          "阶段一": {
+            "消防员": [
+              "接到报警后60秒内出动消防车赶赴现场",
+              "了解火场情况并评估化学品性质与危险性",
+              "启动应急响应级别并通知相关部门支援"
+            ],
+            "医生": [
+              "准备接收伤员并启动急救预案",
+              "配备防化防护装备待命",
+              "与消防队保持联络，了解伤亡情况"
+            ],
+            "保安": [
+              "立即封锁实验室周边区域设置警戒线",
+              "疏散实验室及附近人员至安全地带",
+              "引导救援车辆进入现场通道"
+            ],
+            "物业": [
+              "启动消防设施如报警系统和排烟系统",
+              "检查并确保应急照明和疏散标志正常工作",
+              "提供建筑平面图和危化品存放位置信息"
+            ]
+          },
+          "阶段二": {
+            "消防员": [
+              "穿戴防化服进行灭火作业，优先控制泄漏源",
+              "使用专用灭火剂扑救化学品火灾，避免次生灾害",
+              "协同专业队伍实施冷却、覆盖或转移危险物品"
+            ],
+            "医生": [
+              "在现场外围设立临时救护点",
+              "对受伤人员进行去污处理后实施急救",
+              "根据伤情分类转运至医院进一步治疗"
+            ],
+            "保安": [
+              "维持现场秩序防止无关人员进入",
+              "协助消防员保障救援通道畅通",
+              "配合监控火势动态并及时上报"
+            ],
+            "物业": [
+              "保障水电供应支持灭火系统运行",
+              "协助提供应急物资如防护器材和工具",
+              "配合开展建筑结构安全评估"
+            ]
+          },
+          "阶段三": {
+            "消防员": [
+              "彻底清理火场防止复燃",
+              "参与事故原因初步调查并保护现场证据",
+              "提交灭火行动报告并总结处置经验"
+            ],
+            "医生": [
+              "追踪伤员后续治疗情况",
+              "开展心理干预应对创伤应激反应",
+              "整理医疗救援记录并归档"
+            ],
+            "保安": [
+              "继续封锁现场直至调查结束",
+              "协助调查组保护火灾现场完整性",
+              "恢复日常巡逻并加强重点区域监控"
+            ],
+            "物业": [
+              "组织环境检测评估污染情况",
+              "安排受损设施维修和系统复位",
+              "配合善后处理组完成损失统计与整改"
+            ]
+          }
+        },
+        "resource_coordination": {
+          "incident_id": "incident_20251208_195905",
+          "requirements": {
+            "location": "未知位置",
+            "severity": "中等",
+            "resource_needs": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "quantity": 2,
+                "location": "未知位置"
+              }
+            ]
+          },
+          "allocation_result": {
+            "status": "partial",
+            "message": "部分资源分配成功",
+            "allocated": [],
+            "unavailable": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "requested": 2,
+                "allocated": 0,
+                "location": "未知位置"
+              }
+            ],
+            "guidance": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "guidance": "未知位置附近灭火器不足，请尝试使用其他楼层的灭火器或寻找替代灭火设备",
+                "alternative": "可以使用消防水带或其他灭火设施",
+                "priority": "高"
+              }
+            ]
+          },
+          "resource_status": {
+            "timestamp": "2025-12-08T19:59:05.802257",
+            "total_resources": 8,
+            "available_resources": 3,
+            "allocated_resources": 5,
+            "utilization_rate": 0.625,
+            "resources_by_type": {
+              "FIRE_HOSE": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "EMERGENCY_CONTACT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "MEDICAL_SUPPORT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "FIRE_EXTINGUISHER": {
+                "total": 2,
+                "available": 0,
+                "allocated": 2
+              },
+              "RESCUE_TEAM": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "FIRST_AID_KIT": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "EVACUATION_ROUTE": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              }
+            },
+            "active_agents": 2
+          }
+        },
+        "evaluation": {
+          "hallucination": {
+            "overall_score": 0.3,
+            "hallucination_detected": false,
+            "evaluation_method": "fallback_hallucination_evaluator",
+            "uncertainty_count": 0
+          },
+          "quality": {
+            "overall_quality_score": 0.6799999999999999,
+            "sub_scores": {
+              "accuracy": {
+                "score": 0.6799999999999999
+              },
+              "relevance": {
+                "score": 0.612
+              },
+              "completeness": {
+                "score": 0.578
+              }
+            },
+            "evaluation_method": "fallback_qa_evaluator",
+            "quality_indicators": 1
+          }
+        },
+        "overall_score": 0.49
+      }
+    },
+    {
+      "question": "图书馆火灾，疏散路线和集合点如何安排？",
+      "timestamp": "2025-12-08T19:59:23.595154",
+      "pipeline_result": {
+        "retrieved_docs_count": 10,
+        "generated_response": {
+          "阶段一": {
+            "消防员": [
+              "接到报警后60秒内出动消防车，赶赴火灾现场",
+              "途中与报警人联系了解火势情况",
+              "准备灭火装备和救援设备"
+            ],
+            "医生": [
+              "接到应急通知后立即准备急救物资和救护车",
+              "待命接收伤员，开通绿色通道",
+              "与消防队保持通信，预判伤员数量和伤情"
+            ],
+            "保安": [
+              "立即启动火灾警报，通知馆内人员疏散",
+              "使用灭火器尝试初期灭火，控制火势蔓延",
+              "引导人员沿最近疏散路线撤离至集合点"
+            ],
+            "物业": [
+              "启动消防应急预案，通知相关人员",
+              "检查并确保消防通道畅通",
+              "通过广播系统指导人员有序疏散"
+            ]
+          },
+          "阶段二": {
+            "消防员": [
+              "到达现场后评估火情，设立警戒区域",
+              "组织内攻灭火，搜救被困人员",
+              "连接水源，使用水枪冷却保护周边书架"
+            ],
+            "医生": [
+              "在安全区域设立临时医疗点救治伤员",
+              "对烧伤、窒息等伤员进行紧急处理",
+              "协调转运重伤员至医院"
+            ],
+            "保安": [
+              "维护现场秩序，防止无关人员进入",
+              "协助引导人群疏散至指定集合点",
+              "配合消防员提供建筑结构和火源信息"
+            ],
+            "物业": [
+              "保障电力、供水系统支持灭火需求",
+              "安排人员指引消防车辆停靠和作业位置",
+              "持续广播提醒未撤离人员快速疏散"
+            ]
+          },
+          "阶段三": {
+            "消防员": [
+              "确认火场无明火，防止复燃",
+              "协助调查火灾原因，保护现场证据",
+              "清理现场，收整装备"
+            ],
+            "医生": [
+              "统计救治伤员情况并上报",
+              "配合心理干预团队开展心理疏导",
+              "归档医疗记录，总结应急响应"
+            ],
+            "保安": [
+              "封锁火灾现场，禁止擅自进入",
+              "协助警方和消防部门调查取证",
+              "恢复警戒系统和监控运行"
+            ],
+            "物业": [
+              "组织清理火灾残留物，评估损失",
+              "联系维修单位修复受损设施",
+              "召开善后会议，完善应急预案"
+            ]
+          }
+        },
+        "resource_coordination": {
+          "incident_id": "incident_20251208_195923",
+          "requirements": {
+            "location": "未知位置",
+            "severity": "中等",
+            "resource_needs": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "quantity": 2,
+                "location": "未知位置"
+              }
+            ]
+          },
+          "allocation_result": {
+            "status": "partial",
+            "message": "部分资源分配成功",
+            "allocated": [],
+            "unavailable": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "requested": 2,
+                "allocated": 0,
+                "location": "未知位置"
+              }
+            ],
+            "guidance": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "guidance": "未知位置附近灭火器不足，请尝试使用其他楼层的灭火器或寻找替代灭火设备",
+                "alternative": "可以使用消防水带或其他灭火设施",
+                "priority": "高"
+              }
+            ]
+          },
+          "resource_status": {
+            "timestamp": "2025-12-08T19:59:23.502454",
+            "total_resources": 8,
+            "available_resources": 3,
+            "allocated_resources": 5,
+            "utilization_rate": 0.625,
+            "resources_by_type": {
+              "FIRE_HOSE": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "EMERGENCY_CONTACT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "MEDICAL_SUPPORT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "FIRE_EXTINGUISHER": {
+                "total": 2,
+                "available": 0,
+                "allocated": 2
+              },
+              "RESCUE_TEAM": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "FIRST_AID_KIT": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "EVACUATION_ROUTE": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              }
+            },
+            "active_agents": 3
+          }
+        },
+        "evaluation": {
+          "hallucination": {
+            "overall_score": 0.3,
+            "hallucination_detected": false,
+            "evaluation_method": "fallback_hallucination_evaluator",
+            "uncertainty_count": 0
+          },
+          "quality": {
+            "overall_quality_score": 0.76,
+            "sub_scores": {
+              "accuracy": {
+                "score": 0.76
+              },
+              "relevance": {
+                "score": 0.684
+              },
+              "completeness": {
+                "score": 0.646
+              }
+            },
+            "evaluation_method": "fallback_qa_evaluator",
+            "quality_indicators": 2
+          }
+        },
+        "overall_score": 0.53
+      }
+    },
+    {
+      "question": "高层建筑火灾，电梯是否可以使用？",
+      "timestamp": "2025-12-08T19:59:44.627932",
+      "pipeline_result": {
+        "retrieved_docs_count": 10,
+        "generated_response": {
+          "阶段一": {
+            "消防员": [
+              "接到报警后60秒内出动消防车赶赴现场",
+              "途中与指挥中心保持联系，获取火灾楼层、燃烧物质等信息",
+              "评估是否可使用电梯进行快速部署，通常情况下禁止使用电梯"
+            ],
+            "医生": [
+              "待命准备接收伤员，启动急救预案",
+              "准备烧伤、窒息、外伤等应急救治设备和药品",
+              "与消防指挥中心建立联络，预判伤亡情况"
+            ],
+            "保安": [
+              "立即启动火灾警报系统，通知楼内人员疏散",
+              "关闭非消防电源，防止火势蔓延",
+              "在建筑外围设置初步警戒区域，禁止无关人员进入"
+            ],
+            "物业": [
+              "确认消防设施（如报警系统、喷淋系统）自动启动",
+              "检查并确保消防通道畅通，清除障碍物",
+              "通过广播系统指导人员有序疏散，提醒勿用电梯"
+            ]
+          },
+          "阶段二": {
+            "消防员": [
+              "到达现场后迅速建立火场指挥体系，优先搜救被困人员",
+              "铺设水带干线，选择合适位置出水灭火",
+              "使用云梯、登高平台等装备开展高层救援，严禁使用普通电梯"
+            ],
+            "医生": [
+              "在安全区域设立临时救护点，对 rescued 人员进行检伤分类",
+              "对烧伤、烟雾吸入、骨折等伤者实施紧急处置",
+              "协调救护车将重伤员转运至医院"
+            ],
+            "保安": [
+              "协助消防员维护现场秩序，引导人群至安全集合点",
+              "配合封锁火灾现场，防止人员擅自返回",
+              "协助核对疏散人员名单，报告失踪人员信息"
+            ],
+            "物业": [
+              "提供建筑结构图、消防设施分布图等关键资料给消防指挥员",
+              "保障供水系统压力稳定，支持消防水泵运行",
+              "协调后勤物资供应，如防烟面具、应急照明等"
+            ]
+          },
+          "阶段三": {
+            "消防员": [
+              "火势扑灭后排查余火，防止复燃",
+              "协助消防救援机构调查起火原因，保护现场证据",
+              "清点装备，撤离现场并提交行动报告"
+            ],
+            "医生": [
+              "继续跟进伤员治疗情况，记录医疗数据",
+              "开展心理干预，为受影响人员提供心理支持",
+              "总结急救响应过程，优化应急预案"
+            ],
+            "保安": [
+              "持续警戒火灾现场，直至官方宣布解除",
+              "协助调查人员进出登记，保护现场完整性",
+              "恢复部分区域秩序，准备后续巡查工作"
+            ],
+            "物业": [
+              "配合开展火灾损失评估和设施损坏检查",
+              "组织清理现场，修复或更换受损消防设施",
+              "召开善后会议，修订消防安全管理制度"
+            ]
+          }
+        },
+        "resource_coordination": {
+          "incident_id": "incident_20251208_195944",
+          "requirements": {
+            "location": "未知位置",
+            "severity": "中等",
+            "resource_needs": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "quantity": 2,
+                "location": "未知位置"
+              }
+            ]
+          },
+          "allocation_result": {
+            "status": "partial",
+            "message": "部分资源分配成功",
+            "allocated": [],
+            "unavailable": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "requested": 2,
+                "allocated": 0,
+                "location": "未知位置"
+              }
+            ],
+            "guidance": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "guidance": "未知位置附近灭火器不足，请尝试使用其他楼层的灭火器或寻找替代灭火设备",
+                "alternative": "可以使用消防水带或其他灭火设施",
+                "priority": "高"
+              }
+            ]
+          },
+          "resource_status": {
+            "timestamp": "2025-12-08T19:59:44.528908",
+            "total_resources": 8,
+            "available_resources": 3,
+            "allocated_resources": 5,
+            "utilization_rate": 0.625,
+            "resources_by_type": {
+              "FIRE_HOSE": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "EMERGENCY_CONTACT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "MEDICAL_SUPPORT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "FIRE_EXTINGUISHER": {
+                "total": 2,
+                "available": 0,
+                "allocated": 2
+              },
+              "RESCUE_TEAM": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "FIRST_AID_KIT": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "EVACUATION_ROUTE": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              }
+            },
+            "active_agents": 4
+          }
+        },
+        "evaluation": {
+          "hallucination": {
+            "overall_score": 0.3,
+            "hallucination_detected": false,
+            "evaluation_method": "fallback_hallucination_evaluator",
+            "uncertainty_count": 0
+          },
+          "quality": {
+            "overall_quality_score": 0.76,
+            "sub_scores": {
+              "accuracy": {
+                "score": 0.76
+              },
+              "relevance": {
+                "score": 0.684
+              },
+              "completeness": {
+                "score": 0.646
+              }
+            },
+            "evaluation_method": "fallback_qa_evaluator",
+            "quality_indicators": 2
+          }
+        },
+        "overall_score": 0.53
+      }
+    },
+    {
+      "question": "宿舍楼火灾，学生应该如何自救和互救？",
+      "timestamp": "2025-12-08T20:00:02.159734",
+      "pipeline_result": {
+        "retrieved_docs_count": 10,
+        "generated_response": {
+          "阶段一": {
+            "消防员": [
+              "接警后迅速出动，赶赴火灾现场",
+              "途中与报警人联系了解火势和被困人员情况",
+              "准备破拆、搜救、灭火等装备"
+            ],
+            "医生": [
+              "待命准备接收伤员，启动急救预案",
+              "检查急救药品和设备是否齐全",
+              "与消防指挥中心保持联络，了解伤员情况"
+            ],
+            "保安": [
+              "立即前往起火宿舍楼，确认火情位置",
+              "组织初期疏散，引导学生有序撤离",
+              "关闭电源总闸，防止火势蔓延"
+            ],
+            "物业": [
+              "启动火灾报警系统，通知微型消防站",
+              "确保消防通道畅通，清理障碍物",
+              "协助保安进行人员疏散和秩序维护"
+            ]
+          },
+          "阶段二": {
+            "消防员": [
+              "到达现场后实施火情侦查，确定主攻方向",
+              "开展内攻灭火、搜救被困学生",
+              "架设水枪阵地，控制火势蔓延"
+            ],
+            "医生": [
+              "在安全区域设立临时救护点",
+              "对送医伤员进行分类救治和紧急处理",
+              "协调救护车转运重伤员至医院"
+            ],
+            "保安": [
+              "建立警戒线，封锁火灾现场周边区域",
+              "阻止无关人员进入，保障救援通道畅通",
+              "协助消防员维持现场秩序"
+            ],
+            "物业": [
+              "提供楼宇结构图、消防设施分布图",
+              "保障消防水源供应，启动消防水泵",
+              "配合应急队伍进行物资支持和通信保障"
+            ]
+          },
+          "阶段三": {
+            "消防员": [
+              "完成灭火后进行火场清理和余火排查",
+              "保护火灾现场，协助调查起火原因",
+              "向指挥中心汇报任务完成情况"
+            ],
+            "医生": [
+              "继续监测伤员健康状况，做好后续治疗",
+              "记录伤员信息并上报卫生主管部门",
+              "参与心理干预，为受影响学生提供援助"
+            ],
+            "保安": [
+              "持续值守现场，防止次生事故发生",
+              "协助调查人员保护现场证据",
+              "恢复周边秩序，逐步解除警戒"
+            ],
+            "物业": [
+              "检查建筑结构及设施受损情况",
+              "组织专业单位评估消防系统运行状态",
+              "启动灾后修复工作，配合善后处理组"
+            ]
+          }
+        },
+        "resource_coordination": {
+          "incident_id": "incident_20251208_200002",
+          "requirements": {
+            "location": "未知位置",
+            "severity": "中等",
+            "resource_needs": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "quantity": 2,
+                "location": "未知位置"
+              }
+            ]
+          },
+          "allocation_result": {
+            "status": "partial",
+            "message": "部分资源分配成功",
+            "allocated": [],
+            "unavailable": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "requested": 2,
+                "allocated": 0,
+                "location": "未知位置"
+              }
+            ],
+            "guidance": [
+              {
+                "resource_type": "FIRE_EXTINGUISHER",
+                "guidance": "未知位置附近灭火器不足，请尝试使用其他楼层的灭火器或寻找替代灭火设备",
+                "alternative": "可以使用消防水带或其他灭火设施",
+                "priority": "高"
+              }
+            ]
+          },
+          "resource_status": {
+            "timestamp": "2025-12-08T20:00:02.059301",
+            "total_resources": 8,
+            "available_resources": 3,
+            "allocated_resources": 5,
+            "utilization_rate": 0.625,
+            "resources_by_type": {
+              "FIRE_HOSE": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "EMERGENCY_CONTACT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "MEDICAL_SUPPORT": {
+                "total": 1,
+                "available": 1,
+                "allocated": 0
+              },
+              "FIRE_EXTINGUISHER": {
+                "total": 2,
+                "available": 0,
+                "allocated": 2
+              },
+              "RESCUE_TEAM": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "FIRST_AID_KIT": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              },
+              "EVACUATION_ROUTE": {
+                "total": 1,
+                "available": 0,
+                "allocated": 1
+              }
+            },
+            "active_agents": 5
+          }
+        },
+        "evaluation": {
+          "hallucination": {
+            "overall_score": 0.3,
+            "hallucination_detected": false,
+            "evaluation_method": "fallback_hallucination_evaluator",
+            "uncertainty_count": 0
+          },
+          "quality": {
+            "overall_quality_score": 0.76,
+            "sub_scores": {
+              "accuracy": {
+                "score": 0.76
+              },
+              "relevance": {
+                "score": 0.684
+              },
+              "completeness": {
+                "score": 0.646
+              }
+            },
+            "evaluation_method": "fallback_qa_evaluator",
+            "quality_indicators": 2
+          }
+        },
+        "overall_score": 0.53
+      }
+    }
+  ]
+}

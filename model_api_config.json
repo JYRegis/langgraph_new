@@ -1,0 +1,12 @@
+{
+  "qwen": {
+    "api_key": "sk-42bcb40c4c5049ee914d21a17fd311d8",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+  },
+  "deepseek": {
+    "api_key": "sk-42bcb40c4c5049ee914d21a17fd311d8",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+  }
+}
+
+

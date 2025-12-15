@@ -71,19 +71,12 @@ app.add_middleware(
 # 定义请求和响应的数据结构，这会让你的 API 文档自动生成
 
 class QueryRequest(BaseModel):
-    question: str = Field(..., description="用户输入的火灾情况描述", example="3号楼5楼发生火灾，有人员被困")
-
-class ResourceInfo(BaseModel):
-    resource_id: str
-    resource_type: str
-    location: str
-
-class CoordinationResult(BaseModel):
-    status: str
-    message: str
-    allocated: List[ResourceInfo]
-    unavailable: List[Dict[str, Any]]
-    guidance: List[Dict[str, Any]]
+    # [修复] 解决 PydanticDeprecatedSince20 警告: 使用 json_schema_extra 替代 example
+    question: str = Field(
+        ..., 
+        description="用户输入的火灾情况描述", 
+        json_schema_extra={"example": "3号楼5楼发生火灾，有人员被困"}
+    )
 
 class PipelineResult(BaseModel):
     retrieved_docs_count: int
@@ -122,8 +115,12 @@ async def handle_emergency(request: QueryRequest):
         print(f"收到请求: {request.question}")
         
         # 调用你的核心逻辑
-        # 注意：这里直接调用同步方法，FastAPI 会自动在线程池中运行它
         result = rag_system_instance.process_fire_question(request.question)
+        
+        # [新增关键代码] 在控制台直接打印生成的 JSON，这样你在后端命令行就能看到了
+        print("\n" + "="*20 + " 生成的响应内容 " + "="*20)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        print("="*54 + "\n")
         
         return result
         
@@ -156,8 +153,7 @@ async def reset_system():
     """
     global rag_system_instance
     if rag_system_instance:
-        # 这里你可以添加重置逻辑，目前我们可以简单地重新初始化资源
-        # 简单粗暴的方法：重新实例化 coordinator
+        # 重新实例化 coordinator
         from customer_service_example121 import ResourceCoordinator
         rag_system_instance.resource_coordinator = ResourceCoordinator()
         return {"message": "系统资源已重置"}
@@ -166,7 +162,5 @@ async def reset_system():
 # --- 启动入口 ---
 if __name__ == "__main__":
     # 使用 uvicorn 启动服务器
-    # host="0.0.0.0" 允许局域网内其他电脑访问（例如 Unity 在另一台电脑上）
-    # port=8000 是默认端口
     print("启动服务器中... 请访问 http://localhost:8000/docs 查看接口文档")
     uvicorn.run(app, host="0.0.0.0", port=8000)
